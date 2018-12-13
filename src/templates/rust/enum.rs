@@ -11,7 +11,7 @@
 
 use avtas::lmcp::{Error, ErrorType, Lmcp, SrcLoc};
 
-#[derive(PartialEq, Debug, Copy, Clone)]
+#[derive(PartialEq, Debug, Copy, Clone, Serialize, Deserialize)]
 pub enum -<enum_name>- {-<declare_enum_fields>-
 }
 

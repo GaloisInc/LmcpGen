@@ -12,7 +12,7 @@
 use avtas::lmcp::{Error, ErrorType, Lmcp, LmcpSubscription, SrcLoc, Struct, StructInfo};
 use std::fmt::Debug;
 
-#[derive(Clone, -<struct_copy>-Debug, Default)]
+#[derive(Clone, -<struct_copy>-Debug, Default, Serialize, Deserialize)]
 #[repr(C)]
 pub struct -<datatype_name>- {-<declare_fields>-
 }

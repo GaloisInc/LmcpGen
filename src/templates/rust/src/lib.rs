@@ -12,6 +12,11 @@
 #![allow(non_camel_case_types)]
 
 #[macro_use]
+extern crate serde_derive;
+extern crate serde;
+extern crate serde_json;
+
+#[macro_use]
 #[cfg(test)]
 extern crate quickcheck;
 
@@ -22,7 +27,7 @@ mod avtas;
 use avtas::lmcp::{Lmcp, StructInfo};
 pub use avtas::lmcp::{Error, ErrorType, LmcpSubscription, SrcLoc};
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum Message {
     -<declare_top_enum>-
 }
