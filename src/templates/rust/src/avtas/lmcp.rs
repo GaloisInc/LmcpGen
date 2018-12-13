@@ -43,6 +43,7 @@ pub struct Error {
 }
 
 #[derive(Debug)]
+#[allow(dead_code)]
 pub enum ErrorType {
     ArrayTooLong,
     InvalidEnumValue,

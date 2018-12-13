@@ -889,7 +889,7 @@ public class RustMethods {
             if (type.equals(MDMInfo.LMCP_OBJECT_NAME)) {
                 throw new RuntimeException("avtas::lmcp::Object type not supported for Rust");
             }
-            base = String.format("Box<::%s::%s::%sT>", prefix, snake_case(type), type);
+            base = String.format("Box<::%s::%s::%s>", prefix, snake_case(type), type);
         } else if (field.isEnum) {
             base = String.format("::%s::%s::%s", prefix, snake_case(type), type);
         } else {
